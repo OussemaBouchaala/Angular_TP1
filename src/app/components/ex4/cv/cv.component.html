@@ -1,0 +1,12 @@
+<div class="cv-container">
+  <ng-container *ngIf="!imageError && cv.cvImage">
+    <img class="cv-image" [src]="cv.cvImage" [alt]="cv.firstName + ' ' + cv.lastName" (error)="imageError = true" [attr.title]="cv.firstName + ' ' + cv.lastName" />
+  </ng-container>
+  <ng-container *ngIf="imageError || !cv.cvImage">
+    <div class="cv-placeholder" [attr.title]="cv.firstName + ' ' + cv.lastName">{{ initials }}</div>
+  </ng-container>
+
+  <div class="cv-info">
+    <p class="cv-name">{{ cv.firstName }} {{ cv.lastName }}</p>
+  </div>
+</div>

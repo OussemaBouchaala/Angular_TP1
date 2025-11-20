@@ -1,0 +1,9 @@
+
+<div class="ex1-container" [style.backgroundColor]="color">
+  <h2>Exercise 1: Color Changer</h2>
+  <h5 class="ex1-title">(default color: {{ defaultColor }})</h5>
+  <div class="ex1-controls">
+    <input #ex (change)="changeColor(ex)" type="text" placeholder="Enter a color name or hex" />
+    <button type="button" (click)="color = defaultColor">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="ex3-container">
+  <h2>Exercise 4 - Recruitment Mini Platform</h2>
+  <div class="ex4-wrapper">
+    <div class="ex4-left">
+        <div class="cv-list">
+        <app-list [selected]="selectedCv" (cvSelected)="onCvSelected($event)"></app-list>
+      </div>
+    </div>
+
+    <div class="ex4-right">
+      <ng-container *ngIf="selectedCv; else empty">
+        <app-ex2
+          [coverImg]="selectedCv.cvCover"
+          [profileImg]="selectedCv.cvImage"
+          [firstName]="selectedCv.firstName"
+          [lastName]="selectedCv.lastName"
+          [profession]="selectedCv.profession"
+          [quote]="selectedCv.quote"
+          [motto]="selectedCv.motto"
+          [description]="selectedCv.description"
+          [inputs_invisible]="true"
+        ></app-ex2>
+      </ng-container>
+
+      <ng-template #empty>
+        <p class="no-selection">Sélectionnez un CV à gauche pour voir le détail.</p>
+      </ng-template>
+    </div>
+  </div>
+
+</div>

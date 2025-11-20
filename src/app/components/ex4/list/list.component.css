@@ -1,0 +1,7 @@
+.cv-item { cursor: pointer; border-radius: 8px; transition: background .15s, transform .06s; }
+.cv-item:hover { background: #f5f7ff; transform: translateY(-2px); }
+.cv-item:active { transform: translateY(0); }
+.cv-list { display:flex; flex-direction: column; gap: 6px; }
+
+.cv-item.selected { background: linear-gradient(90deg,#eef2ff,#f7f0ff); box-shadow: 0 6px 18px rgba(100,80,200,0.06); transform: translateY(-2px); }
+

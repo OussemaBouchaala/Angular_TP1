@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-center;
+  margin: 10px;
+}
+/* Rotating card styling (simple, non-animated fallback) */
+
+/* small responsive */
+@media (max-width:600px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Ex3-like container styling copied from Ex3 */
+.ex3-container {
+  max-width: 100%;
+  margin: 0 auto 1.25rem auto;
+  padding: 20px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ex3-container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.ex3-container p,
+.ex3-container label {
+  color: black;
+}

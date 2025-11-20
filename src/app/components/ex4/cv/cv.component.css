@@ -1,0 +1,32 @@
+:host { display: block; }
+.cv-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #ffffffcc;
+}
+.cv-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e6e6e6;
+  flex-shrink: 0;
+}
+.cv-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#6b6bff,#9f9fff);
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.cv-info { line-height: 1; }
+.cv-name { margin: 0; font-size: 14px; font-weight: 600; }
+.cv-profession { margin: 0; font-size: 12px; color: #666; }

@@ -1,0 +1,3 @@
+<div *ngFor="let cv of cvs" (click)="onSelectCv(cv)" class="cv-item" [class.selected]="selected === cv">
+  <app-cv [cv]="cv"></app-cv>
+</div>

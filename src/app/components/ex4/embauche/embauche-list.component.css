@@ -1,0 +1,30 @@
+.embauche-list {
+  padding: 8px;
+}
+.hired-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hired-item {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.actions button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.controls button {
+  margin-top: 8px;
+}
+.empty {
+  color: #666;
+}

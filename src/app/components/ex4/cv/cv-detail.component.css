@@ -1,0 +1,19 @@
+.cv-detail .card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+.cv-detail .card-body {
+  padding: 1rem;
+}
+.cv-detail .actions button {
+  min-width: 120px;
+}
+
+.cv-detail .profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.cv-detail .profile-wrapper { margin-top: -60px; }

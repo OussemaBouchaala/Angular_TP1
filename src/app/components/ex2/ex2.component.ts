@@ -1,16 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { EmbaucheService } from '../ex4/embauche/embauche.service';
+import { ToastrService } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ex2',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule, RouterModule],
   templateUrl: './ex2.component.html',
   styleUrls: ['./ex2.component.css'],
   standalone: true,
 
 })
 export class Ex2Component {
+  @Input() cv: any | null = null;
   @Input() coverImg="assets/images/rotating_card_thumb.png"
   @Input() profileImg="assets/images/rotating_card_profile.png"
   @Input() firstName="Oussema"
@@ -30,4 +34,17 @@ export class Ex2Component {
     { url: 'twitter.com', class: 'twitter', icon: 'fa fa-twitter fa-fw' }
   ]
   @Input() inputs_invisible:boolean = false;
+
+  constructor(private embaucheService: EmbaucheService, private toastr: ToastrService) {}
+
+  hireCv(event: Event) {
+    event.stopPropagation();
+    if (!this.cv) return;
+    const added = this.embaucheService.hire(this.cv);
+    if (added) {
+      this.toastr.success('CV embauché avec succès', 'Embauche');
+    } else {
+      this.toastr.info('Ce CV est déjà embauché', 'Information');
+    }
+  }
 }

@@ -1,0 +1,25 @@
+<div *ngIf="cv; else notFound" class="cv-detail container">
+  <div class="card mt-3">
+    <img *ngIf="cv.cvCover" [src]="cv.cvCover" class="card-img-top" alt="cover" />
+    <div class="card-body text-center">
+      <div class="profile-wrapper">
+        <img *ngIf="cv.cvImage" [src]="cv.cvImage" alt="profile" class="rounded-circle profile-img mb-2" />
+      </div>
+      <h3 class="card-title">{{ cv.firstName }} {{ cv.lastName }}</h3>
+      <p class="text-muted">{{ cv.profession }}</p>
+      <p><strong>Quote:</strong> {{ cv.quote }}</p>
+      <p><strong>Motto:</strong> {{ cv.motto }}</p>
+      <p><strong>Description:</strong> {{ cv.description }}</p>
+
+      <div class="actions mt-3">
+        <button class="btn btn-danger me-2" (click)="delete()">Delete</button>
+        <button class="btn btn-secondary" (click)="back()">Back to list</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="alert alert-warning">CV non trouvé.</div>
+  <a routerLink="/cvs" class="btn btn-primary">Retour à la liste</a>
+</ng-template>

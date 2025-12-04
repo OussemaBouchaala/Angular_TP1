@@ -8,16 +8,17 @@
     </div>
 
     <div class="ex4-right">
-      <ng-container *ngIf="selectedCv; else empty">
+      <ng-container class="ex2" *ngIf="selectedCv()">
         <app-ex2
-          [coverImg]="selectedCv.cvCover"
-          [profileImg]="selectedCv.cvImage"
-          [firstName]="selectedCv.firstName"
-          [lastName]="selectedCv.lastName"
-          [profession]="selectedCv.profession"
-          [quote]="selectedCv.quote"
-          [motto]="selectedCv.motto"
-          [description]="selectedCv.description"
+          [coverImg]="selectedCv()?.cvCover"
+          [profileImg]="selectedCv()?.cvImage"
+          [cv]="selectedCv()"
+          [firstName]="selectedCv()?.firstName"
+          [lastName]="selectedCv()?.lastName"
+          [profession]="selectedCv()?.profession"
+          [quote]="selectedCv()?.quote"
+          [motto]="selectedCv()?.motto"
+          [description]="selectedCv()?.description"
           [inputs_invisible]="true"
         ></app-ex2>
       </ng-container>
@@ -26,6 +27,11 @@
         <p class="no-selection">Sélectionnez un CV à gauche pour voir le détail.</p>
       </ng-template>
     </div>
+  </div>
+
+  <!-- Hired list rendered below the main wrapper -->
+  <div class="ex4-embauche">
+    <app-embauche-list></app-embauche-list>
   </div>
 
 </div>

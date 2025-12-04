@@ -1,0 +1,28 @@
+<div class="auth-container container mt-4">
+  <div class="card p-4 mx-auto" style="max-width:420px;">
+    <h3 class="mb-3">Authentification</h3>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" formControlName="email" class="form-control" [class.invalid]="isInvalid('email')" />
+        <div *ngIf="isInvalid('email')" class="invalid-feedback d-block">
+          <div *ngIf="form.get('email')?.errors?.['required']">L'email est requis.</div>
+          <div *ngIf="form.get('email')?.errors?.['email']">Entrez une adresse email valide.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" formControlName="password" class="form-control" [class.invalid]="isInvalid('password')" />
+        <div *ngIf="isInvalid('password')" class="invalid-feedback d-block">
+          <div *ngIf="form.get('password')?.errors?.['required']">Le mot de passe est requis.</div>
+          <div *ngIf="form.get('password')?.errors?.['minlength']">Le mot de passe doit contenir au moins 4 caractères.</div>
+        </div>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</div>

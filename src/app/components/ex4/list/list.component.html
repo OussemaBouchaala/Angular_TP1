@@ -1,3 +1,7 @@
-<div *ngFor="let cv of cvs" (click)="onSelectCv(cv)" class="cv-item" [class.selected]="selected === cv">
+<div *ngFor="let cv of cvs()" (click)="onSelectCv(cv)" class="cv-item" [class.selected]="isSelected(cv)">
   <app-cv [cv]="cv"></app-cv>
+  <div class="cv-actions mt-2">
+    <button class="btn btn-sm btn-primary me-2" *ngIf="cv" (click)="$event.stopPropagation(); hire(cv)">Embaucher</button>
+    <a [routerLink]="['/cvs', cv.id]" class="btn btn-sm btn-outline-secondary" (click)="$event.stopPropagation()">Details</a>
+  </div>
 </div>

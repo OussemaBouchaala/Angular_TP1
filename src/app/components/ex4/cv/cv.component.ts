@@ -1,16 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-interface Cv {
-  cvImage: string;
-  cvCover?: string;
-  firstName: string;
-  lastName: string;
-  profession?: string;
-  quote?: string;
-  motto?: string;
-  description?: string;
-}
+// No interface: use plain object (any) for CV
 
 @Component({
   selector: 'app-cv',
@@ -20,7 +11,7 @@ interface Cv {
   standalone: true,
 })
 export class CvComponent {
-  @Input() cv: Cv = { cvImage: "", firstName: "", lastName: "" };
+  @Input() cv: any = { cvImage: "", firstName: "", lastName: "" };
   imageError = false;
 
   get initials(): string {

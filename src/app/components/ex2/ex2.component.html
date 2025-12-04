@@ -1,5 +1,5 @@
 <div class="ex3-container">
-  <h2>Exercise 2 - Rotating Card</h2>
+  <h2></h2>
   <div class="container">
     <div class="card-container">
       <div class="card">
@@ -41,6 +41,10 @@
               <a *ngFor="let link of socialLinks" [href]="link.url" [ngClass]="link.class">
                 <i [ngClass]="link.icon"></i>
               </a>
+            </div>
+            <div class="hire-button text-center d-flex justify-content-center gap-2">
+              <button *ngIf="cv" class="btn btn-primary btn-sm" (click)="hireCv($event)">Embaucher</button>
+              <a *ngIf="cv" [routerLink]="['/cvs', cv.id]" (click)="$event.stopPropagation()" class="btn btn-secondary btn-sm">Details</a>
             </div>
           </div>
         </div>

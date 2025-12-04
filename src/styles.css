@@ -1,2 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Custom Toastr styling */
+.custom-toast {
+	border-radius: 10px !important;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+	padding: 12px 14px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-toast .toast-message {
+	font-size: 0.95rem;
+	color: #111;
+}
+
+/* Success */
+.custom-toast.toast-success {
+	background: linear-gradient(90deg, #2ecc71 0%, #27ae60 100%) !important;
+	color: white !important;
+	border: 1px solid rgba(0,0,0,0.04) !important;
+}
+
+/* Info */
+.custom-toast.toast-info {
+	background: linear-gradient(90deg, #3498db 0%, #2980b9 100%) !important;
+	color: white !important;
+}
+
+/* Warning */
+.custom-toast.toast-warning {
+	background: linear-gradient(90deg, #f39c12 0%, #d35400 100%) !important;
+	color: white !important;
+}
+
+/* Error */
+.custom-toast.toast-error {
+	background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%) !important;
+	color: white !important;
+}
+
+/* Smaller close button */
+.custom-toast .toast-close-button {
+	color: rgba(255,255,255,0.9) !important;
+	opacity: 0.9;
+}
+
+/* Reduce default margin so toasts sit closer to content */
+.toast-top-right { top: 12px; right: 12px; }
+
+

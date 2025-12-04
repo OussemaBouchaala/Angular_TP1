@@ -12,6 +12,7 @@
   margin: 10px;
 }
 /* Rotating card styling (simple, non-animated fallback) */
+.hire-button { margin-top: 8px; }
 
 /* small responsive */
 @media (max-width:600px) {

@@ -1,6 +1,6 @@
 .ex4-wrapper { display: flex; gap: 20px; align-items: flex-start; padding: 12px; }
 .ex4-left { width: 320px; max-width: 40%; }
-.ex4-right { flex: 1; min-width: 300px; }
+.ex4-right { flex: 1; min-width: 300px; max-height: 500px;}
 .cv-list { max-height: 70vh; overflow-y: auto; padding-right: 6px; }
 .no-selection { color: #f7c9c9; font-style: italic; padding: 24px; }
 
@@ -21,4 +21,3 @@
   color: black;
 }
 .ex3-container h2 { text-align: center; color: white; margin-bottom: 18px; font-size: 22px; font-weight: 600; }
-
